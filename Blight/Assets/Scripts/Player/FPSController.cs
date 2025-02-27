@@ -10,12 +10,16 @@ namespace Player
         public float runSpeed = 12f;
         public float jumpPower = 7f;
         public float gravity = 10f;
-
-
+        
+        
         public float lookSpeed = 2f;
         public float lookXLimit = 45f;
 
-
+        // FOV Effects
+        public float normalFOV = 60f;
+        public float sprintFOV = 80f;
+        public float fovSmoothSpeed = 5f;  
+        
         Vector3 _moveDirection = Vector3.zero;
         private float _rotationX;
 
@@ -75,6 +79,12 @@ namespace Player
             }
 
             #endregion
+            
+            #region Handles FOV Effect
+            float targetFOV = isRunning ? sprintFOV : normalFOV;
+            playerCamera.fieldOfView = Mathf.Lerp(playerCamera.fieldOfView, targetFOV, Time.deltaTime * fovSmoothSpeed);
+            #endregion
+            
         }
     }
 }
