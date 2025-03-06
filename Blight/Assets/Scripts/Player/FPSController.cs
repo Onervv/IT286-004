@@ -1,16 +1,18 @@
 using UnityEngine;
+using  UnityEngine.UI;
 
 namespace Player
 {
     [RequireComponent(typeof(CharacterController))]
     public class FPSController : MonoBehaviour
     {
+        // Movement
         public Camera playerCamera;
         public float walkSpeed = 6f;
         public float runSpeed = 12f;
         public float jumpPower = 7f;
         public float gravity = 10f;
-        
+        public bool canMove = true;
         
         public float lookSpeed = 2f;
         public float lookXLimit = 45f;
@@ -22,9 +24,11 @@ namespace Player
         
         Vector3 _moveDirection = Vector3.zero;
         private float _rotationX;
-
-        public bool canMove = true;
-
+        
+        // Player Interface
+        public Image staminaBar;
+        public float stamina, maxStamina = 100f;
+        public float sprintCost = 10f;
     
         CharacterController _characterController;
         void Start()
@@ -42,12 +46,13 @@ namespace Player
             Vector3 right = transform.TransformDirection(Vector3.right);
 
             // Press Left Shift to run
-            bool isRunning = Input.GetKey(KeyCode.LeftShift);
+            bool isTryingToRun = Input.GetKey(KeyCode.LeftShift);
+            bool canSprint = stamina > 0; // Prevent sprinting when stamina is 0
+            bool isRunning = isTryingToRun && canSprint; // Only true if sprinting is allowed
             float curSpeedX = canMove ? (isRunning ? runSpeed : walkSpeed) * Input.GetAxis("Vertical") : 0;
             float curSpeedY = canMove ? (isRunning ? runSpeed : walkSpeed) * Input.GetAxis("Horizontal") : 0;
             float movementDirectionY = _moveDirection.y;
             _moveDirection = (forward * curSpeedX) + (right * curSpeedY);
-
             #endregion
 
             #region Handles Jumping
@@ -85,6 +90,22 @@ namespace Player
             playerCamera.fieldOfView = Mathf.Lerp(playerCamera.fieldOfView, targetFOV, Time.deltaTime * fovSmoothSpeed);
             #endregion
             
+            #region Handles Stamina
+            staminaBar.fillAmount = stamina / maxStamina;
+
+            switch (isRunning)
+            {
+                case true:
+                    stamina -= sprintCost * Time.deltaTime;
+                    break;
+                // Regenerate stamina when not running
+                case false:
+                    stamina += (sprintCost / 2) * Time.deltaTime;
+                    break;
+            }
+            stamina = Mathf.Clamp(stamina, 0, maxStamina);
+            #endregion
+
         }
     }
 }
