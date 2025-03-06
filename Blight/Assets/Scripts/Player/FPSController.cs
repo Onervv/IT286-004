@@ -86,7 +86,7 @@ namespace Player
             #endregion
             
             #region Handles FOV Effect
-            float targetFOV = canSprint ? sprintFOV : normalFOV;
+            float targetFOV = isRunning ? sprintFOV : normalFOV;
             playerCamera.fieldOfView = Mathf.Lerp(playerCamera.fieldOfView, targetFOV, Time.deltaTime * fovSmoothSpeed);
             #endregion
             
