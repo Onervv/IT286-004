@@ -1,3 +1,4 @@
+
 using UnityEngine;
 using  UnityEngine.UI;
 
@@ -47,7 +48,7 @@ namespace Player
 
             // Press Left Shift to run
             bool isTryingToRun = Input.GetKey(KeyCode.LeftShift);
-            bool canSprint = stamina > 0; // Prevent sprinting when stamina is 0
+            bool canSprint = stamina > 0; 
             bool isRunning = isTryingToRun && canSprint; // Only true if sprinting is allowed
             float curSpeedX = canMove ? (isRunning ? runSpeed : walkSpeed) * Input.GetAxis("Vertical") : 0;
             float curSpeedY = canMove ? (isRunning ? runSpeed : walkSpeed) * Input.GetAxis("Horizontal") : 0;
@@ -97,10 +98,17 @@ namespace Player
             {
                 case true:
                     stamina -= sprintCost * Time.deltaTime;
+                    if (stamina <= 20)
+                    {
+                        staminaBar.color = Color.red;
+                    }
                     break;
-                // Regenerate stamina when not running
                 case false:
                     stamina += (sprintCost / 2) * Time.deltaTime;
+                    if (stamina >= 20)
+                    {
+                        staminaBar.color = Color.green;
+                    }
                     break;
             }
             stamina = Mathf.Clamp(stamina, 0, maxStamina);
