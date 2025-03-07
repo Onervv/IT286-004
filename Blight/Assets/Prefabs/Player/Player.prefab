@@ -65,7 +65,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a615cc7e83e702948ad80f8ddbbc32e6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -127,9 +127,16 @@ MonoBehaviour:
   runSpeed: 12
   jumpPower: 7
   gravity: 10
+  canMove: 1
   lookSpeed: 2
   lookXLimit: 45
-  canMove: 1
+  normalFOV: 60
+  sprintFOV: 80
+  fovSmoothSpeed: 5
+  staminaBar: {fileID: 0}
+  stamina: 0
+  maxStamina: 100
+  sprintCost: 10
 --- !u!143 &6746723119497727235
 CharacterController:
   m_ObjectHideFlags: 0
