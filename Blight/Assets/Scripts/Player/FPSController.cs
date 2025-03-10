@@ -14,49 +14,60 @@ namespace Player
         public float jumpPower = 7f;
         public float gravity = 10f;
         public bool canMove = true;
-        
+
         public float lookSpeed = 2f;
         public float lookXLimit = 45f;
 
         // FOV Effects
         public float normalFOV = 60f;
         public float sprintFOV = 80f;
-        public float fovSmoothSpeed = 5f;  
-        
+        public float fovSmoothSpeed = 5f;
+
         Vector3 _moveDirection = Vector3.zero;
         private float _rotationX;
-        
+
         // Player Interface
         public Image staminaBar;
         public float stamina, maxStamina = 100f;
         public float sprintCost = 10f;
-    
+        public Image healthBar;
+        public float health, maxHealth = 100f;
+
+
         CharacterController _characterController;
+
         void Start()
         {
             _characterController = GetComponent<CharacterController>();
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
+
+            // Set initial health and stamina
+            health = maxHealth;
+            stamina = maxStamina;
         }
 
         void Update()
         {
 
             #region Handles Movment
+
             Vector3 forward = transform.TransformDirection(Vector3.forward);
             Vector3 right = transform.TransformDirection(Vector3.right);
 
             // Press Left Shift to run
             bool isTryingToRun = Input.GetKey(KeyCode.LeftShift);
-            bool canSprint = stamina > 0; 
+            bool canSprint = stamina > 0;
             bool isRunning = isTryingToRun && canSprint; // Only true if sprinting is allowed
             float curSpeedX = canMove ? (isRunning ? runSpeed : walkSpeed) * Input.GetAxis("Vertical") : 0;
             float curSpeedY = canMove ? (isRunning ? runSpeed : walkSpeed) * Input.GetAxis("Horizontal") : 0;
             float movementDirectionY = _moveDirection.y;
             _moveDirection = (forward * curSpeedX) + (right * curSpeedY);
+
             #endregion
 
             #region Handles Jumping
+
             if (Input.GetButton("Jump") && canMove && _characterController.isGrounded)
             {
                 _moveDirection.y = jumpPower;
@@ -74,6 +85,7 @@ namespace Player
             #endregion
 
             #region Handles Rotation
+
             _characterController.Move(_moveDirection * Time.deltaTime);
 
             if (canMove)
@@ -85,35 +97,49 @@ namespace Player
             }
 
             #endregion
-            
+
             #region Handles FOV Effect
+
             float targetFOV = isRunning ? sprintFOV : normalFOV;
             playerCamera.fieldOfView = Mathf.Lerp(playerCamera.fieldOfView, targetFOV, Time.deltaTime * fovSmoothSpeed);
+
             #endregion
-            
-            #region Handles Stamina
+
+            #region Handles Stamina & Health
+
+// Update UI elements
+            healthBar.fillAmount = health / maxHealth;
             staminaBar.fillAmount = stamina / maxStamina;
-
-            switch (isRunning)
+// Handle stamina changes
+            if (isRunning)
             {
-                case true:
-                    stamina -= sprintCost * Time.deltaTime;
-                    if (stamina <= 20)
-                    {
-                        staminaBar.color = Color.red;
-                    }
-                    break;
-                case false:
-                    stamina += (sprintCost / 2) * Time.deltaTime;
-                    if (stamina >= 20)
-                    {
-                        staminaBar.color = Color.green;
-                    }
-                    break;
-            }
-            stamina = Mathf.Clamp(stamina, 0, maxStamina);
-            #endregion
+                stamina -= sprintCost * Time.deltaTime;
 
+                // Drain health when stamina is critically low
+                if (stamina <= 20)
+                {
+                    health -= 5f * Time.deltaTime;
+                }
+            }
+            else
+            {
+                // Regenerate stamina when not running
+                stamina += (sprintCost / 2) * Time.deltaTime;
+            }
+
+// Calculate stamina color - interpolate between red and green
+            float staminaRatio = stamina / maxStamina;
+            staminaBar.color = Color.Lerp(Color.red, Color.green, staminaRatio);
+
+// Ensure values stay within bounds
+            stamina = Mathf.Clamp(stamina, 0, maxStamina);
+            health = Mathf.Clamp(health, 0, maxHealth);
+
+        #endregion
+        
         }
-    }
+    } 
 }
+
+    
+
