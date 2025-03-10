@@ -1,6 +1,8 @@
 
+using TMPro.EditorUtilities;
+using Unity.VisualScripting;
 using UnityEngine;
-using  UnityEngine.UI;
+using UnityEngine.UI;
 
 namespace Player
 {
@@ -136,7 +138,6 @@ namespace Player
             health = Mathf.Clamp(health, 0, maxHealth);
 
         #endregion
-        
         }
     } 
 }
