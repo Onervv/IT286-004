@@ -291,6 +291,14 @@ PrefabInstance:
       propertyPath: field of view
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 5663632360454339131, guid: bb2ef66c394c67d448efff25ee966212, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5663632360454339131, guid: bb2ef66c394c67d448efff25ee966212, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6493443254604092098, guid: bb2ef66c394c67d448efff25ee966212, type: 3}
       propertyPath: m_Name
       value: Player
