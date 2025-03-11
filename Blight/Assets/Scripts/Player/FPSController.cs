@@ -13,13 +13,13 @@ namespace Player
     {
         // Movement
         public Camera playerCamera;
-        public float walkSpeed = 6f;
-        public float runSpeed = 12f;
-        public float jumpPower = 7f;
-        public float gravity = 10f;
+        public float walkSpeed = 3f;
+        public float runSpeed = 7f;
+        public float jumpPower = 5f;
+        public float gravity = 15f;
         public bool canMove = true;
 
-        public float lookSpeed = 2f;
+        public float lookSpeed = 4f;
         public float lookXLimit = 45f;
 
         // FOV Effects
