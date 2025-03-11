@@ -4,6 +4,7 @@ using TMPro.EditorUtilities;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 namespace Player
 {
@@ -60,6 +61,7 @@ namespace Player
             // Set initial health and stamina
             health = maxHealth;
             stamina = maxStamina;
+            DontDestroyOnLoad(gameObject);
         }
 
         void Update()
@@ -179,8 +181,6 @@ namespace Player
             #endregion
         }
 
-       
-
         void Shoot()
         {
             Vector3 fireDirection = playerCamera.transform.forward;
@@ -205,6 +205,12 @@ namespace Player
 
             GameObject tempBullet = Instantiate(bullet, shootOrigin, Quaternion.LookRotation(fireDirection));
             tempBullet.GetComponent<MoveBullet>().hitPoint = targetPoint;
+        }
+
+        void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+        {
+            GameObject spawnPoint = GameObject.Find("Spawn Point");
+            gameObject.transform.position = spawnPoint.transform.position;
         }
 
 

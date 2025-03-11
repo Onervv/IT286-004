@@ -83,7 +83,7 @@ namespace Game_Function
                 Debug.Log("Loading new scene...");
 
                 // Load the new scene (replace "NewSceneName" with your scene's name)
-                SceneManager.LoadScene("NewSceneName");
+                SceneManager.LoadScene("Cave-System");
             }
         }
     
