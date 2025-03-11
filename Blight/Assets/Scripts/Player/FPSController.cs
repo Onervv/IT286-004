@@ -179,6 +179,8 @@ namespace Player
             #endregion
         }
 
+       
+
         void Shoot()
         {
             Vector3 fireDirection = playerCamera.transform.forward;
@@ -204,6 +206,7 @@ namespace Player
             GameObject tempBullet = Instantiate(bullet, shootOrigin, Quaternion.LookRotation(fireDirection));
             tempBullet.GetComponent<MoveBullet>().hitPoint = targetPoint;
         }
+
 
     }
 }
