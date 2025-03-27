@@ -2451,6 +2451,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rainfall
       objectReference: {fileID: 0}
+    - target: {fileID: 2219603423137678927, guid: 0f13c53fed87e4833b27579f8eb3d911, type: 3}
+      propertyPath: m_Layer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6671324259296220297, guid: 0f13c53fed87e4833b27579f8eb3d911, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.98
@@ -2490,6 +2494,10 @@ PrefabInstance:
     - target: {fileID: 6671324259296220297, guid: 0f13c53fed87e4833b27579f8eb3d911, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8422365682505305966, guid: 0f13c53fed87e4833b27579f8eb3d911, type: 3}
+      propertyPath: m_Layer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
