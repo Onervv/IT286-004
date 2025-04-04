@@ -9,13 +9,15 @@ public class caveEntrance : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
-        player.transform.position = spawnPos.transform.position;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+
+        if (player) return;
+        player.transform.position = spawnPos.transform.position;
     }
 }
