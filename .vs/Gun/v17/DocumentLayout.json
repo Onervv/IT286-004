@@ -1,0 +1,190 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\vishv\\Documents\\NJIT\\IT286\\Gun\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F5252F08-7014-7E8A-0DF6-6450424B9164}|Assembly-CSharp.csproj|C:\\Users\\vishv\\Documents\\NJIT\\IT286\\Gun\\assets\\firstpersoncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5252F08-7014-7E8A-0DF6-6450424B9164}|Assembly-CSharp.csproj|solutionrelative:assets\\firstpersoncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5252F08-7014-7E8A-0DF6-6450424B9164}|Assembly-CSharp.csproj|C:\\Users\\vishv\\Documents\\NJIT\\IT286\\Gun\\assets\\gun.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5252F08-7014-7E8A-0DF6-6450424B9164}|Assembly-CSharp.csproj|solutionrelative:assets\\gun.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5252F08-7014-7E8A-0DF6-6450424B9164}|Assembly-CSharp.csproj|C:\\Users\\vishv\\Documents\\NJIT\\IT286\\Gun\\assets\\health.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5252F08-7014-7E8A-0DF6-6450424B9164}|Assembly-CSharp.csproj|solutionrelative:assets\\health.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5252F08-7014-7E8A-0DF6-6450424B9164}|Assembly-CSharp.csproj|C:\\Users\\vishv\\Documents\\NJIT\\IT286\\Gun\\assets\\movebullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5252F08-7014-7E8A-0DF6-6450424B9164}|Assembly-CSharp.csproj|solutionrelative:assets\\movebullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5252F08-7014-7E8A-0DF6-6450424B9164}|Assembly-CSharp.csproj|C:\\Users\\vishv\\Documents\\NJIT\\IT286\\Gun\\assets\\shotgun.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5252F08-7014-7E8A-0DF6-6450424B9164}|Assembly-CSharp.csproj|solutionrelative:assets\\shotgun.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5252F08-7014-7E8A-0DF6-6450424B9164}|Assembly-CSharp.csproj|C:\\Users\\vishv\\Documents\\NJIT\\IT286\\Gun\\assets\\weaponmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5252F08-7014-7E8A-0DF6-6450424B9164}|Assembly-CSharp.csproj|solutionrelative:assets\\weaponmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5252F08-7014-7E8A-0DF6-6450424B9164}|Assembly-CSharp.csproj|C:\\Users\\vishv\\Documents\\NJIT\\IT286\\Gun\\assets\\hominggun.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5252F08-7014-7E8A-0DF6-6450424B9164}|Assembly-CSharp.csproj|solutionrelative:assets\\hominggun.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5252F08-7014-7E8A-0DF6-6450424B9164}|Assembly-CSharp.csproj|C:\\Users\\vishv\\Documents\\NJIT\\IT286\\Gun\\assets\\homingbullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5252F08-7014-7E8A-0DF6-6450424B9164}|Assembly-CSharp.csproj|solutionrelative:assets\\homingbullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5252F08-7014-7E8A-0DF6-6450424B9164}|Assembly-CSharp.csproj|c:\\users\\vishv\\documents\\njit\\it286\\gun\\assets\\parrysystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5252F08-7014-7E8A-0DF6-6450424B9164}|Assembly-CSharp.csproj|solutionrelative:assets\\parrysystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5252F08-7014-7E8A-0DF6-6450424B9164}|Assembly-CSharp.csproj|c:\\users\\vishv\\documents\\njit\\it286\\gun\\assets\\reflectableenemybullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5252F08-7014-7E8A-0DF6-6450424B9164}|Assembly-CSharp.csproj|solutionrelative:assets\\reflectableenemybullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 9,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ReflectableEnemyBullet.cs",
+              "DocumentMoniker": "C:\\Users\\vishv\\Documents\\NJIT\\IT286\\Gun\\Assets\\ReflectableEnemyBullet.cs",
+              "RelativeDocumentMoniker": "Assets\\ReflectableEnemyBullet.cs",
+              "ToolTip": "C:\\Users\\vishv\\Documents\\NJIT\\IT286\\Gun\\Assets\\ReflectableEnemyBullet.cs",
+              "RelativeToolTip": "Assets\\ReflectableEnemyBullet.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACIAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T22:25:51.391Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ParrySystem.cs",
+              "DocumentMoniker": "C:\\Users\\vishv\\Documents\\NJIT\\IT286\\Gun\\Assets\\ParrySystem.cs",
+              "RelativeDocumentMoniker": "Assets\\ParrySystem.cs",
+              "ToolTip": "C:\\Users\\vishv\\Documents\\NJIT\\IT286\\Gun\\Assets\\ParrySystem.cs",
+              "RelativeToolTip": "Assets\\ParrySystem.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T22:20:09.374Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "HomingBullet.cs",
+              "DocumentMoniker": "C:\\Users\\vishv\\Documents\\NJIT\\IT286\\Gun\\Assets\\HomingBullet.cs",
+              "RelativeDocumentMoniker": "Assets\\HomingBullet.cs",
+              "ToolTip": "C:\\Users\\vishv\\Documents\\NJIT\\IT286\\Gun\\Assets\\HomingBullet.cs",
+              "RelativeToolTip": "Assets\\HomingBullet.cs",
+              "ViewState": "AQIAACsAAAAAAAAAAAAQwDcAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T23:47:50.783Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "HomingGun.cs",
+              "DocumentMoniker": "C:\\Users\\vishv\\Documents\\NJIT\\IT286\\Gun\\Assets\\HomingGun.cs",
+              "RelativeDocumentMoniker": "Assets\\HomingGun.cs",
+              "ToolTip": "C:\\Users\\vishv\\Documents\\NJIT\\IT286\\Gun\\Assets\\HomingGun.cs",
+              "RelativeToolTip": "Assets\\HomingGun.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADQAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T23:44:16.454Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "WeaponManager.cs",
+              "DocumentMoniker": "C:\\Users\\vishv\\Documents\\NJIT\\IT286\\Gun\\Assets\\WeaponManager.cs",
+              "RelativeDocumentMoniker": "Assets\\WeaponManager.cs",
+              "ToolTip": "C:\\Users\\vishv\\Documents\\NJIT\\IT286\\Gun\\Assets\\WeaponManager.cs",
+              "RelativeToolTip": "Assets\\WeaponManager.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T21:14:07.713Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Shotgun.cs",
+              "DocumentMoniker": "C:\\Users\\vishv\\Documents\\NJIT\\IT286\\Gun\\Assets\\Shotgun.cs",
+              "RelativeDocumentMoniker": "Assets\\Shotgun.cs",
+              "ToolTip": "C:\\Users\\vishv\\Documents\\NJIT\\IT286\\Gun\\Assets\\Shotgun.cs",
+              "RelativeToolTip": "Assets\\Shotgun.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T21:11:23.661Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MoveBullet.cs",
+              "DocumentMoniker": "C:\\Users\\vishv\\Documents\\NJIT\\IT286\\Gun\\Assets\\MoveBullet.cs",
+              "RelativeDocumentMoniker": "Assets\\MoveBullet.cs",
+              "ToolTip": "C:\\Users\\vishv\\Documents\\NJIT\\IT286\\Gun\\Assets\\MoveBullet.cs",
+              "RelativeToolTip": "Assets\\MoveBullet.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-07T01:54:38.298Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Health.cs",
+              "DocumentMoniker": "C:\\Users\\vishv\\Documents\\NJIT\\IT286\\Gun\\Assets\\Health.cs",
+              "RelativeDocumentMoniker": "Assets\\Health.cs",
+              "ToolTip": "C:\\Users\\vishv\\Documents\\NJIT\\IT286\\Gun\\Assets\\Health.cs",
+              "RelativeToolTip": "Assets\\Health.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-07T01:54:31.172Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Gun.cs",
+              "DocumentMoniker": "C:\\Users\\vishv\\Documents\\NJIT\\IT286\\Gun\\Assets\\Gun.cs",
+              "RelativeDocumentMoniker": "Assets\\Gun.cs",
+              "ToolTip": "C:\\Users\\vishv\\Documents\\NJIT\\IT286\\Gun\\Assets\\Gun.cs",
+              "RelativeToolTip": "Assets\\Gun.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADYAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-07T01:54:20.854Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FirstPersonController.cs",
+              "DocumentMoniker": "C:\\Users\\vishv\\Documents\\NJIT\\IT286\\Gun\\Assets\\FirstPersonController.cs",
+              "RelativeDocumentMoniker": "Assets\\FirstPersonController.cs",
+              "ToolTip": "C:\\Users\\vishv\\Documents\\NJIT\\IT286\\Gun\\Assets\\FirstPersonController.cs",
+              "RelativeToolTip": "Assets\\FirstPersonController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-07T00:42:44.121Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
