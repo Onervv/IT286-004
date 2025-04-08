@@ -9,7 +9,7 @@ namespace Game_Function
     {
         // UI References
         public GameObject uiPrompt; 
-        public Button yesButton;    
+        public Button yesButton;
     
 
         private bool _playerInside; // To track if the player is inside the trigger

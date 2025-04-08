@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/CampfireFeatureScene.unity
-    guid: 0398536d8793f4b2b8b350bbd6b9fc82
+    path: Assets/Scenes/CampGroundAlpha.unity
+    guid: 979027f64708a4bb7af0db911e9ba00d
   - enabled: 1
     path: Assets/Scenes/Cave-System.unity
     guid: 1edf69bdbbbbe1140b4644b56ac0f338

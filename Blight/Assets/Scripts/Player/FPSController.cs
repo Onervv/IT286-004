@@ -1,6 +1,6 @@
 
 using System;
-using TMPro.EditorUtilities;
+//using TMPro.EditorUtilities;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
@@ -37,7 +37,7 @@ namespace Player
         public Image healthBar;
         public float health, maxHealth = 100f;
 
-        // Projectile Information
+        //Projectile Information
         public float cooldownSpeed;
         public float fireRate;
         public float recoilCooldown;
@@ -144,11 +144,11 @@ namespace Player
                 stamina += (sprintCost / 2) * Time.deltaTime;
             }
 
-// Calculate stamina color - interpolate between red and green
+            // Calculate stamina color - interpolate between red and green
             float staminaRatio = stamina / maxStamina;
             staminaBar.color = Color.Lerp(Color.red, Color.green, staminaRatio);
 
-// Ensure values stay within bounds
+            // Ensure values stay within bounds
             stamina = Mathf.Clamp(stamina, 0, maxStamina);
             health = Mathf.Clamp(health, 0, maxHealth);
 
@@ -156,56 +156,56 @@ namespace Player
 
             #region Handles Shooting Projectiles
 
-            cooldownSpeed += Time.deltaTime * 60f;
+            //cooldownSpeed += Time.deltaTime * 60f;
 
-            if (Input.GetMouseButtonDown(0))
-            {
-                accuracy += Time.deltaTime * 4f;
-                if (cooldownSpeed >= fireRate)
-                {
-                    Shoot();
-                    //gunshot.PlayOneShot(singleShot);
-                    cooldownSpeed = 0;
-                    recoilCooldown = 1;
-                }
-            }
-            else
-            {
-                recoilCooldown -= Time.deltaTime;
-                if (recoilCooldown <= 1)
-                {
-                    accuracy = 0.0f;
-                }
-            }
+            //if (Input.GetMouseButtonDown(0))
+            //{
+            //    accuracy += Time.deltaTime * 4f;
+            //    if (cooldownSpeed >= fireRate)
+            //    {
+            //        //Shoot();
+            //        //gunshot.PlayOneShot(singleShot);
+            //        cooldownSpeed = 0;
+            //        recoilCooldown = 1;
+            //    }
+            //}
+            //else
+            //{
+            //    recoilCooldown -= Time.deltaTime;
+            //    if (recoilCooldown <= 1)
+            //    {
+            //        accuracy = 0.0f;
+            //    }
+            //}
 
             #endregion
         }
 
-        void Shoot()
-        {
-            Vector3 fireDirection = playerCamera.transform.forward;
-            Vector3 shootOrigin = shootPoint.transform.position;
+        //void Shoot()
+        //{
+        //    Vector3 fireDirection = playerCamera.transform.forward;
+        //    Vector3 shootOrigin = shootPoint.transform.position;
 
-            float currentSpread = Mathf.Lerp(0.0f, maxSpreadAngle, accuracy / timeTillMaxSpread);
+        //    float currentSpread = Mathf.Lerp(0.0f, maxSpreadAngle, accuracy / timeTillMaxSpread);
 
-            fireDirection = Quaternion.AngleAxis(UnityEngine.Random.Range(-currentSpread, currentSpread), playerCamera.transform.up) * fireDirection;
-            fireDirection = Quaternion.AngleAxis(UnityEngine.Random.Range(-currentSpread, currentSpread), playerCamera.transform.right) * fireDirection;
+        //    fireDirection = Quaternion.AngleAxis(UnityEngine.Random.Range(-currentSpread, currentSpread), playerCamera.transform.up) * fireDirection;
+        //    fireDirection = Quaternion.AngleAxis(UnityEngine.Random.Range(-currentSpread, currentSpread), playerCamera.transform.right) * fireDirection;
 
-            RaycastHit hit;
-            Vector3 targetPoint;
+        //    RaycastHit hit;
+        //    Vector3 targetPoint;
 
-            if (Physics.Raycast(playerCamera.transform.position, fireDirection, out hit, Mathf.Infinity))
-            {
-                targetPoint = hit.point;
-            }
-            else
-            {
-                targetPoint = playerCamera.transform.position + fireDirection * 1000f;
-            }
+        //    if (Physics.Raycast(playerCamera.transform.position, fireDirection, out hit, Mathf.Infinity))
+        //    {
+        //        targetPoint = hit.point;
+        //    }
+        //    else
+        //    {
+        //        targetPoint = playerCamera.transform.position + fireDirection * 1000f;
+        //    }
 
-            GameObject tempBullet = Instantiate(bullet, shootOrigin, Quaternion.LookRotation(fireDirection));
-            tempBullet.GetComponent<MoveBullet>().hitPoint = targetPoint;
-        }
+        //    GameObject tempBullet = Instantiate(bullet, shootOrigin, Quaternion.LookRotation(fireDirection));
+        //    tempBullet.GetComponent<MoveBullet>().hitPoint = targetPoint;
+        //}
 
         void OnSceneLoaded(Scene scene, LoadSceneMode mode)
         {

@@ -6,14 +6,14 @@ using System.IO;
 public class MoveBullet : MonoBehaviour
 {
     public Vector3 hitPoint;
-    public GameObject dirt;
+    //public GameObject dirt;
     public GameObject blood;
-    public int speed;
+    public int speed = 3000;
 
     void Start()
     {
         this.GetComponent<Rigidbody>().AddForce((hitPoint - this.transform.position).normalized * speed);
-        Destroy(this.gameObject,1.5f);
+        Destroy(this.gameObject,1f);
     }
 
     void Update()
@@ -21,21 +21,24 @@ public class MoveBullet : MonoBehaviour
         
     }
 
-    void OnCollisionEnter(Collision col)
+    private void OnCollisionEnter(Collision collision)
     {
-        if (col.gameObject.tag == "Enemy")
+        if (collision.gameObject.tag == "Enemy")
         {
-            //col.gameObject.GetComponent<Health>().currentHealth -= 20;
-            GameObject newBlood = Instantiate(blood, this.transform.position, this.transform.rotation);
-            newBlood.transform.parent = col.transform;
-            Destroy(this.gameObject);
+            Debug.Log(collision.gameObject);
+            collision.gameObject.GetComponent<EnemyController>().TakeDamage(10);
+            //GameObject newBlood = Instantiate(blood, this.transform.position, this.transform.rotation);
+            //newBlood.transform.parent = collision.transform;
+            Destroy(gameObject);
         }
         else
         {
-            Instantiate(dirt, this.transform.position, this.transform.rotation);
-            Destroy(this.gameObject);
+            //Instantiate(dirt, this.transform.position, this.transform.rotation);
+            Destroy(gameObject);
         }
 
-        Destroy(this.gameObject);
+        Destroy(gameObject);
     }
+
+    
 }

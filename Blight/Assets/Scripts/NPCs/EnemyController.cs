@@ -6,6 +6,8 @@ using UnityEngine.AI;
 
 public class EnemyController : MonoBehaviour
 {
+    float max_hp = 100;
+    public float health = 100;
 
     NavMeshAgent agent;
     public GameObject target;
@@ -15,6 +17,8 @@ public class EnemyController : MonoBehaviour
     public int attack_radius = 10;
 
     public float damage_amt = 0.01f;
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -47,6 +51,20 @@ public class EnemyController : MonoBehaviour
 
         return null;
     }
+
+    public void Enemy_Death()
+    {
+        // Can add enemy drops here
+        Destroy(gameObject);
+    }
+
+
+    public void TakeDamage(float dmg_amt)
+    {
+        if ((health -= dmg_amt) <= 0) 
+            Enemy_Death();
+    }
+
 
 }
 

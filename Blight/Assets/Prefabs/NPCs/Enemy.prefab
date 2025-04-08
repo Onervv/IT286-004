@@ -13,10 +13,10 @@ GameObject:
   - component: {fileID: 8170207920257896565}
   - component: {fileID: 7413718562494708444}
   - component: {fileID: 2626071518925328225}
-  - component: {fileID: 7964686982032447965}
+  - component: {fileID: 5964310498627374297}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -56,7 +56,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1941e36e7c442864ebe6ab487a35595b, type: 2}
+  - {fileID: 2100000, guid: 5df36347dbf2b1a4fb626a0a87233635, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -120,35 +120,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ed22ca2dddfbac44a0ff0391ffa23be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 100
   target: {fileID: 0}
   Player: {fileID: 0}
   scan_radius: 30
   attack_radius: 4
   damage_amt: 0.1
---- !u!54 &7964686982032447965
-Rigidbody:
+--- !u!136 &5964310498627374297
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6148357954061870682}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
