@@ -13,7 +13,7 @@ public class Projectile : MonoBehaviour
         {
             collided = true;
             
-            var impact = Instantiate(impactVFX, collision.contacts[0].point, Quaternion.identity) as GameObject;
+            var impact = Instantiate(impactVFX, collision.contacts[0].point, Quaternion.identity);
             
             Destroy(impact, 2f);
             

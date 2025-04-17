@@ -157,6 +157,7 @@ GameObject:
   - component: {fileID: 6419321396661333694}
   - component: {fileID: 4604945324559967993}
   - component: {fileID: 1017705301070725273}
+  - component: {fileID: 8479997808038048035}
   m_Layer: 0
   m_Name: vfx_projectile 1
   m_TagString: Bullet
@@ -242,6 +243,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   impactVFX: {fileID: 5326724486789018871, guid: c81921c2ba4fb41928bf4e8e2063860c, type: 3}
+--- !u!114 &8479997808038048035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7217030701443052388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f00daf8070874370b0957d2f4ef7b50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8048052970832634312
 GameObject:
   m_ObjectHideFlags: 0
