@@ -11,6 +11,8 @@ namespace Player
     [RequireComponent(typeof(CharacterController))]
     public class FPSController : MonoBehaviour
     {
+        // public static FPSController instance;
+        
         // Movement
         public Camera playerCamera;
         public float walkSpeed = 3f;
@@ -48,9 +50,23 @@ namespace Player
             // Set initial health and stamina
             health = maxHealth;
             stamina = maxStamina;
-            DontDestroyOnLoad(gameObject);
+            // DontDestroyOnLoad(gameObject); 
         }
 
+        // void Awake()
+        // {
+        //     // Check if there's already an instance
+        //     if (instance != null && instance != this)
+        //     {
+        //         Destroy(gameObject); // Destroy duplicate
+        //         return;
+        //     }
+        //
+        //     // Make this the instance and persist across scenes
+        //     instance = this;
+        //     DontDestroyOnLoad(gameObject);
+        // }
+        
         void Update()
         {
 
