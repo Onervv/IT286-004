@@ -8,6 +8,7 @@ namespace Game_Function
     public class EnterLevel : MonoBehaviour
     {
         // UI References
+        public string sceneToLoad;
         public GameObject uiPrompt; 
         public Button yesButton;
     
@@ -82,9 +83,10 @@ namespace Game_Function
             
                 Debug.Log("Loading new scene...");
 
-                // Load the new scene (replace "NewSceneName" with your scene's name)
-                SceneManager.LoadScene("Cave-System");
+                // Load the new scene 
+                SceneManager.LoadScene(sceneToLoad);
             }
+            
         }
     
         public void PauseGameForUI(bool showUI)

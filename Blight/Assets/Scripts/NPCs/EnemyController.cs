@@ -6,7 +6,6 @@ using UnityEngine.AI;
 
 public class EnemyController : MonoBehaviour
 {
-    float max_hp = 100;
     public float health = 100;
 
     NavMeshAgent agent;

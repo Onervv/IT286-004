@@ -11,6 +11,8 @@ namespace Player
     [RequireComponent(typeof(CharacterController))]
     public class FPSController : MonoBehaviour
     {
+        // public static FPSController instance;
+        
         // Movement
         public Camera playerCamera;
         public float walkSpeed = 3f;
@@ -36,20 +38,7 @@ namespace Player
         public float sprintCost = 10f;
         public Image healthBar;
         public float health, maxHealth = 100f;
-
-        //Projectile Information
-        public float cooldownSpeed;
-        public float fireRate;
-        public float recoilCooldown;
-        private float accuracy;
-        public float maxSpreadAngle;
-        public float timeTillMaxSpread;
-        public GameObject bullet;
-        public GameObject shootPoint;
-        public AudioSource gunshot;
-        public AudioClip singleShot;
-
-
+        
         CharacterController _characterController;
 
         void Start()
@@ -61,9 +50,23 @@ namespace Player
             // Set initial health and stamina
             health = maxHealth;
             stamina = maxStamina;
-            DontDestroyOnLoad(gameObject);
+            // DontDestroyOnLoad(gameObject); 
         }
 
+        // void Awake()
+        // {
+        //     // Check if there's already an instance
+        //     if (instance != null && instance != this)
+        //     {
+        //         Destroy(gameObject); // Destroy duplicate
+        //         return;
+        //     }
+        //
+        //     // Make this the instance and persist across scenes
+        //     instance = this;
+        //     DontDestroyOnLoad(gameObject);
+        // }
+        
         void Update()
         {
 
@@ -123,6 +126,8 @@ namespace Player
             #endregion
 
             #region Handles Stamina & Health
+            
+            // healthBarUI.SetHealth(health);
 
 // Update UI elements
             healthBar.fillAmount = health / maxHealth;
@@ -153,60 +158,8 @@ namespace Player
             health = Mathf.Clamp(health, 0, maxHealth);
 
             #endregion
-
-            #region Handles Shooting Projectiles
-
-            //cooldownSpeed += Time.deltaTime * 60f;
-
-            //if (Input.GetMouseButtonDown(0))
-            //{
-            //    accuracy += Time.deltaTime * 4f;
-            //    if (cooldownSpeed >= fireRate)
-            //    {
-            //        //Shoot();
-            //        //gunshot.PlayOneShot(singleShot);
-            //        cooldownSpeed = 0;
-            //        recoilCooldown = 1;
-            //    }
-            //}
-            //else
-            //{
-            //    recoilCooldown -= Time.deltaTime;
-            //    if (recoilCooldown <= 1)
-            //    {
-            //        accuracy = 0.0f;
-            //    }
-            //}
-
-            #endregion
         }
-
-        //void Shoot()
-        //{
-        //    Vector3 fireDirection = playerCamera.transform.forward;
-        //    Vector3 shootOrigin = shootPoint.transform.position;
-
-        //    float currentSpread = Mathf.Lerp(0.0f, maxSpreadAngle, accuracy / timeTillMaxSpread);
-
-        //    fireDirection = Quaternion.AngleAxis(UnityEngine.Random.Range(-currentSpread, currentSpread), playerCamera.transform.up) * fireDirection;
-        //    fireDirection = Quaternion.AngleAxis(UnityEngine.Random.Range(-currentSpread, currentSpread), playerCamera.transform.right) * fireDirection;
-
-        //    RaycastHit hit;
-        //    Vector3 targetPoint;
-
-        //    if (Physics.Raycast(playerCamera.transform.position, fireDirection, out hit, Mathf.Infinity))
-        //    {
-        //        targetPoint = hit.point;
-        //    }
-        //    else
-        //    {
-        //        targetPoint = playerCamera.transform.position + fireDirection * 1000f;
-        //    }
-
-        //    GameObject tempBullet = Instantiate(bullet, shootOrigin, Quaternion.LookRotation(fireDirection));
-        //    tempBullet.GetComponent<MoveBullet>().hitPoint = targetPoint;
-        //}
-
+        
         void OnSceneLoaded(Scene scene, LoadSceneMode mode)
         {
             GameObject spawnPoint = GameObject.Find("Spawn Point");

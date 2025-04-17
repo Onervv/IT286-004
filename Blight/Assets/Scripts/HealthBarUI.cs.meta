@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: a4fb1e405ffe54ca1a04e4027cd7bbab
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - healthImage: {instanceID: 0}
+  - fullHealthSprite: {fileID: -1128579711, guid: 60c9027a1c92049eb96b5f7df6661bbd, type: 3}
+  - highHealthSprite: {fileID: 1433165133, guid: 60c9027a1c92049eb96b5f7df6661bbd, type: 3}
+  - medHealthSprite: {fileID: 125941872, guid: 60c9027a1c92049eb96b5f7df6661bbd, type: 3}
+  - lowHealthSprite: {fileID: 676921990, guid: 60c9027a1c92049eb96b5f7df6661bbd, type: 3}
+  - noHealthSprite: {fileID: 999634536, guid: 60c9027a1c92049eb96b5f7df6661bbd, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
