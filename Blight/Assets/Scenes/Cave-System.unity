@@ -96,7 +96,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 2cd5b18fc39e748f4a7b60b8c73aff4e, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -1464,6 +1464,10 @@ PrefabInstance:
     - target: {fileID: 447243188338876879, guid: 21b24df17bc8942d9a99ca8ffb8a542c, type: 3}
       propertyPath: sceneToLoad
       value: Dungeon
+      objectReference: {fileID: 0}
+    - target: {fileID: 4518677075163947820, guid: 21b24df17bc8942d9a99ca8ffb8a542c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5889064142535575183, guid: 21b24df17bc8942d9a99ca8ffb8a542c, type: 3}
       propertyPath: m_Name

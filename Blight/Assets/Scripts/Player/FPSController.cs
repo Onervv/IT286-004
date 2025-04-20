@@ -160,11 +160,11 @@ namespace Player
             #endregion
         }
         
-        void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-        {
-            GameObject spawnPoint = GameObject.Find("Spawn Point");
-            gameObject.transform.position = spawnPoint.transform.position;
-        }
+        // void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+        // {
+        //     GameObject spawnPoint = GameObject.Find("Spawn Point");
+        //     gameObject.transform.position = spawnPoint.transform.position;
+        // }
 
 
     }
