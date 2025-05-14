@@ -15,7 +15,7 @@ public class EnemyController : MonoBehaviour
     public int scan_radius = 50;
     public int attack_radius = 10;
 
-    public float damage_amt = 0.01f;
+    public float damage_amt = 1f;
 
 
 

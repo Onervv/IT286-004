@@ -194,7 +194,7 @@ namespace Player
         public void IncreaseKillCount()
         {
             EnemyKills++;
-            if (EnemyKills % 1 == 0) // Change to 5
+            if (EnemyKills % 10 == 0) // Change to 5
                 ApplyDebuff();
         }
 
