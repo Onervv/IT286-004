@@ -11,6 +11,8 @@ public enum effects
     Speed,
     Jump,
     Gravity,
+    LowGravity,
+    Slowness,
 }
 
 public class PickupInfo : MonoBehaviour
@@ -23,10 +25,11 @@ public class PickupInfo : MonoBehaviour
     public float effectAmtSpeed = 4f;
     public float effectAmtJump = 10f;
     public float effectAmtGravity = 2f;
+    public float effectAmtSlowness = 20f;
 
     private void OnTriggerEnter(Collider collision)
     {
-        Debug.Log("Pickup Entered");
+        Debug.Log("Pickup Entered: " + effect.ToString());
 
         if (collision.gameObject.CompareTag("Player"))
         {
@@ -54,6 +57,20 @@ public class PickupInfo : MonoBehaviour
                 case effects.Gravity:
                     StartCoroutine(TemporaryStatChange(() => player_controller.gravity -= effectAmtGravity, () => player_controller.gravity += effectAmtGravity));
                     break;
+
+                case effects.LowGravity:
+                    duration = 5;
+                    float preJumpPower = player_controller.jumpPower;
+                    StartCoroutine(TemporaryStatChange(() => player_controller.jumpPower = 0.7f, () => player_controller.jumpPower = preJumpPower));
+                    break;
+
+                case effects.Slowness:
+                    duration = 5;
+                    float preWalkSpeed = player_controller.walkSpeed;
+                    float preRunSpeed = player_controller.runSpeed;
+                    StartCoroutine(TemporaryStatChange(() => player_controller.walkSpeed = preWalkSpeed * 0.5f, () => player_controller.walkSpeed = preWalkSpeed));
+                    StartCoroutine(TemporaryStatChange(() => player_controller.runSpeed = preRunSpeed * 0.5f, () => player_controller.runSpeed = preRunSpeed));
+                    break;
             }
 
             Destroy(gameObject);
@@ -64,6 +81,6 @@ public class PickupInfo : MonoBehaviour
     {
         applyEffect.Invoke();
         yield return new WaitForSeconds(duration);
-        revertEffect.Invoke();
+        if (revertEffect != null) revertEffect.Invoke();
     }
 }

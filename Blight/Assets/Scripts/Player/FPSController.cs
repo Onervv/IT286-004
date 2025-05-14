@@ -5,6 +5,9 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.Runtime.CompilerServices;
+using System.Collections;
+using UnityEngine.VFX;
 
 namespace Player
 {
@@ -32,6 +35,9 @@ namespace Player
         Vector3 _moveDirection = Vector3.zero;
         private float _rotationX;
 
+        public GameObject deathVFX;
+        public GameObject deathScreen;
+
         // Player Interface
         public Image staminaBar;
         public float stamina, maxStamina = 100f;
@@ -40,6 +46,14 @@ namespace Player
         public float health, maxHealth = 100f;
         
         CharacterController _characterController;
+
+        // Debufs
+        public GameObject[] debufs;
+
+
+       
+        //Stats
+        public int EnemyKills = 0;
 
         void Start()
         {
@@ -158,14 +172,37 @@ namespace Player
             health = Mathf.Clamp(health, 0, maxHealth);
 
             #endregion
+
+            if (health == 0) StartCoroutine(PlayDeathSequence());
         }
-        
+
+        private IEnumerator PlayDeathSequence()
+        {
+            deathVFX.SetActive(true);
+            yield return new WaitForSeconds(3f);
+            deathScreen.SetActive(true);
+            deathVFX.SetActive(false);
+            health = -1;
+        }
+
         void OnSceneLoaded(Scene scene, LoadSceneMode mode)
         {
             GameObject spawnPoint = GameObject.Find("Spawn Point");
             gameObject.transform.position = spawnPoint.transform.position;
         }
 
+        public void IncreaseKillCount()
+        {
+            EnemyKills++;
+            if (EnemyKills % 1 == 0) // Change to 5
+                ApplyDebuff();
+        }
+
+        void ApplyDebuff()
+        {
+            Debug.Log("SPAWNED DEBUFF");
+            Instantiate(debufs[UnityEngine.Random.Range(0, debufs.Length)], gameObject.transform.position, Quaternion.identity);
+        }
 
     }
 }

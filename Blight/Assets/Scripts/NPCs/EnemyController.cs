@@ -23,6 +23,7 @@ public class EnemyController : MonoBehaviour
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        Player = GameObject.Find("Player 1");
     }
 
     // Update is called once per frame
@@ -53,7 +54,7 @@ public class EnemyController : MonoBehaviour
 
     public void Enemy_Death()
     {
-        // Can add enemy drops here
+        Player.GetComponent<FPSController>().IncreaseKillCount();
         Destroy(gameObject);
     }
 
