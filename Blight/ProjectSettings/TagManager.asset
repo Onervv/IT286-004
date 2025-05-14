@@ -10,6 +10,7 @@ TagManager:
   - Rock
   - Enemy
   - Bullet
+  - Win
   layers:
   - Default
   - TransparentFX
